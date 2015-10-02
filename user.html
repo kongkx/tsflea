@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>天水跳蚤</title>
+  <script src="javascripts/jquery-1.11.3.js"></script>
+  <script src="javascripts/bootstrap.js"></script>
+  <link rel="stylesheet" href="stylesheets/styles.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">天水跳蚤</a>
+      </div>
+      <div class="collapse navbar-collapse" id="main-nav">
+        <form class="navbar-form navbar-left navbar-input-group" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+          <button type="submit" class="btn btn-default">搜索</button>
+        </form>
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">闲置物品 <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">数码科技</a>
+              </li>
+              <li><a href="#">交通工具</a>
+              </li>
+              <li><a href="#">生活家居</a>
+              </li>
+              <li><a href="#">宝宝用品</a>
+              </li>
+              <li><a href="#">女人爱物</a>
+              </li>
+              <li><a href="#">音乐乐器</a>
+              </li>
+            </ul>
+          </li>
+          <li class=""><a href="event-list.html">活动</a>
+          </li>
+          <li class=""><a href="article-list.html">文章</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a type="button" class="btn btn-primary navbar-list-btn">发布产品</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-envelope fa-fw"></i> <span class="badge">42</span></a>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">用户 <span class="caret"></span></a>
+            <ul class="dropdown-menu active">
+              <li class="active"><a href="user.html">我的闲置</a>
+              </li>
+              <li><a href="#">我的收藏</a>
+              </li>
+              <li><a href="#">账号设置</a>
+              </li>
+              <li class="divider"></li>
+              <li><a href="#">退出</a>
+              </li>
+              <li><a href="#">帮助中心</a>
+              </li>
+              <li><a href="#">意见反馈</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="main-content">
+    <div class="container">
+      <div id="breadcrumb">
+        <ol class="breadcrumb">
+          <li><a href="#">Home</a>
+          </li>
+          <li><a href="#">Library</a>
+          </li>
+          <li class="active">Data</li>
+        </ol>
+      </div>
+      <div class="alert alert-success" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+ 欢迎回来</div>
+      <div id="user-info">
+        <img src="" alt="" class="avatar">
+        <h2 class="username">Kongkx <small>(<a href="" class="userpoint">4222</a>)</small></h2>
+        <p class="registration-date">注册时间：2015年8月7日</p>
+        <div class="description">
+          <p>关于 Kongkx</p>
+          <p>前端爱好者</p>
+        </div>
+        <div class="btn-group">
+          <button type="button" class="btn btn-sm btn-primary">编辑资料</button>
+          <button type="button" class="btn btn-sm btn-danger">注销用户</button>
+        </div>
+      </div>
+      <div id="content" class="panel panel-default">
+        <div class="panel-body">
+          <ul class="nav nav-tabs">
+            <li role="presentation" class="active"><a href="#user-goods" data-toggle="tab">闲置物品 <span class="badge">0</span></a>
+            </li>
+            <li role="presentation"><a href="#user-stared" data-toggle="tab">收藏 <span class="badge">0</span></a>
+            </li>
+            <li role="presentation"><a href="#user-messages" data-toggle="tab">消息 <span class="badge">0</span></a>
+            </li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="user-goods">
+              <div class="controls">
+                <div class="col-md-4"><a href="" class="btn btn-primary" id="new-pub">发布闲置</a></div>
+                <div class="col-md-4 col-xs-9"><form action="" id="search">
+                  <div class="form-group">
+                    <input type="text" name="key" class="form-control" placeholder="搜索你的物品">
+                  </div>
+                </form></div>
+                <div class="col-md-4 col-xs-3 text-right">
+                  <div class="dropdown">
+                  <button class="btn btn-default dropdown-toggle" type="button" id="filters" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <i class="fa fa-filter"></i>
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="filters">
+                    <li><a href="#">查看完成交易的物品</a>
+                    </li>
+                  </ul>
+                </div>
+                </div>
+              </div>
+              <div class="alert alert-info" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+ 没有有效的物品</div>
+            </div>
+            <div class="tab-pane" id="user-stared">收藏</div>
+            <div class="tab-pane" id="user-messages">消息</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer id="footer">
+    <div class="container">
+      <div class="col-md-4">
+        <div id="footer-nav">
+          <ul>
+            <li><span class="title">帮助中心</span>
+              <ul>
+                <li><a href="">新手导航</a>
+                </li>
+                <li><a href="">新手导航</a>
+                </li>
+                <li><a href="">新手导航</a>
+                </li>
+                <li><a href="">新手导航</a>
+                </li>
+                <li><a href="">新手导航</a>
+                </li>
+              </ul>
+            </li>
+            <li><span class="title">关于我们</span>
+              <ul>
+                <li><a href="">关于我们</a>
+                </li>
+                <li><a href="">网站动态</a>
+                </li>
+                <li><a href="">网站动态</a>
+                </li>
+                <li><a href="">网站动态</a>
+                </li>
+                <li><a href="">网站动态</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div id="tag-cloud">
+          <h3>热门标签</h3>
+          <div class="tags">
+            <a href="">xbox360</a>
+            <a href="">吉他</a>
+            <a href="">phone6plus</a>
+            <a href="">MacBookPro</a>
+            <a href="">Note3</a>
+            <a href="">xbox360</a>
+            <a href="">吉他</a>
+            <a href="">phone6plus</a>
+            <a href="">MacBookPro</a>
+            <a href="">Note3</a>
+            <a href="">xbox360</a>
+            <a href="">吉他</a>
+            <a href="">phone6plus</a>
+            <a href="">MacBookPro</a>
+            <a href="">Note3</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <article id="intro">
+          <h3>天水跳蚤 | tsflea.com</h3>
+          <p>一个运用开源技术开发的二手信息发布平台
+            <br> 一个简约、时尚、实用的二手信息平台
+            <br> 一个属于天水我们自己的跳蚤网站
+            <br> 一个网站、app、微信公众平台
+            <br> 一个认真用心做事的态度
+          </p>
+        </article>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
